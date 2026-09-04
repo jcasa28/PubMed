@@ -1,0 +1,575 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f6f8f4;
+  color: #1c1f1a;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+  width: min(960px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 70px 0 50px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  margin-bottom: 64px;
+  padding: 20px 0 10px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  color: #5eaa3b;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0;
+
+  color: #182015;
+
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 22px 0 0;
+
+  color: #677063;
+
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 48px;
+
+  border-bottom: 1px solid #dde3d9;
+}
+
+.navItem {
+  position: relative;
+
+  padding: 16px 0;
+
+  border: none;
+  background: none;
+
+  color: #7a8276;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.navItem:hover {
+  color: #5eaa3b;
+}
+
+.navItem.active {
+  color: #397f24;
+  font-weight: 650;
+}
+
+.navItem.active::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+
+  height: 2px;
+
+  border-radius: 999px;
+  background: #5eaa3b;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  color: #1d261a;
+
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.sectionHeader p {
+  margin: 6px 0 0;
+
+  color: #81897d;
+
+  font-size: 14px;
+}
+
+.count {
+  padding: 6px 11px;
+
+  border: 1px solid #dce5d8;
+  border-radius: 999px;
+
+  background: #edf4ea;
+
+  color: #4c7938;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   PUBLICATION LIST
+========================= */
+
+.list {
+  display: grid;
+  gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  padding: 28px;
+
+  border: 1px solid #e0e6dd;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.02),
+    0 4px 14px rgba(0, 0, 0, 0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  border-color: #cbdac5;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.04),
+    0 18px 40px rgba(55, 90, 40, 0.06);
+}
+
+/* =========================
+   META
+========================= */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  color: #899184;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card h3 {
+  margin: 14px 0 10px;
+
+  color: #1c2419;
+
+  font-size: 21px;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.authors {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+
+  color: #60695c;
+
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.authors.expanded {
+  display: block;
+}
+
+.expandableSection {
+  margin-bottom: 18px;
+}
+
+.abstractBox {
+  margin-top: 22px;
+}
+
+.abstractBox h4 {
+  margin: 0 0 9px;
+
+  color: #596354;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.abstract {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+
+  color: #343a31;
+
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify;
+
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+
+.abstract.expanded {
+  display: block;
+}
+
+.expandButton {
+  margin-top: 7px;
+  padding: 0;
+
+  border: none;
+  background: none;
+  
+  color: #548d3c;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  color: #316f1c;
+}
+
+/* =========================
+   AI / LAY SUMMARY
+========================= */
+
+.summaryBox {
+  margin-top: 22px;
+  padding: 18px 20px;
+
+  border: 1px solid #dbe8d6;
+  border-radius: 12px;
+
+  background: #f3f8f0;
+}
+
+.summaryBox h4 {
+  margin: 0 0 9px;
+
+  color: #467c31;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summary {
+  margin: 0;
+
+  color: #596354;
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  text-align: justify;
+}
+
+.noSummary {
+  margin: 0;
+
+  color: #969c92;
+
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.card a {
+  color: #478d2e;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.card a:hover {
+  color: #2e701a;
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 50px;
+  padding-top: 22px;
+
+  border-top: 1px solid #dde3d9;
+
+  color: #8a9186;
+
+  font-size: 13px;
+}
+
+.footer a {
+  color: #4e8139;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .page {
+    width: min(100% - 28px, 960px);
+    padding: 40px 0;
+  }
+
+  .hero {
+    margin-bottom: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 12vw, 56px);
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .navbar {
+    gap: 22px;
+    overflow-x: auto;
+  }
+
+  .navItem {
+    flex-shrink: 0;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card h3 {
+    font-size: 19px;
+  }
+
+  .abstract,
+  .summary {
+    text-align: left;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+
+/* =========================
+   CLINICAL TRIALS SEARCH
+========================= */
+
+.trialSearch {
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 6px;
+
+  border: 1px solid #dce5d8;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 14px rgba(55, 90, 40, 0.04);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.trialSearch:focus-within {
+  border-color: #9fc990;
+
+  box-shadow:
+    0 0 0 3px rgba(94, 170, 59, 0.08),
+    0 6px 18px rgba(55, 90, 40, 0.06);
+}
+
+.trialSearch input {
+  flex: 1;
+
+  min-width: 0;
+  padding: 12px 14px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #1c2419;
+
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.trialSearch input::placeholder {
+  color: #a0a79c;
+}
+
+.trialSearch button {
+  padding: 11px 22px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #5eaa3b;
+  color: white;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.trialSearch button:hover {
+  background: #4b9430;
+
+  box-shadow: 0 4px 12px rgba(71, 141, 46, 0.18);
+}
+
+.trialSearch button:active {
+  transform: scale(0.97);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .trialSearch {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .trialSearch input {
+    width: 100%;
+  }
+
+  .trialSearch button {
+    width: 100%;
+  }
+}

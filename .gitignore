@@ -1,0 +1,81 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build output
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test and coverage output
+coverage/
+.nyc_output/
+.pytest_cache/
+
+# Cache files
+.cache/
+*.tmp
+*.temp
+
+# Database
+*.sqlite
+*.db
+*.sqlite3
+# Build output
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test and coverage output
+coverage/
+.nyc_output/
+
+# Cache files
+.cache/
+*.tmp
+*.temp
+
+#database
+*.sqlite
+*.db
+*.sqlite3
