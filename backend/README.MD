@@ -1,3 +1,4 @@
+```
 GET /api/publications
         ↓
       PubMed
@@ -15,3 +16,18 @@ SQLite       OpenAI one time
           ↓
      Lay Summary
    + View on PubMed
+```
+
+   Trials:
+
+   ```
+   Criteria
+   ↓
+Complicated?
+   ↓
+   NO ─────────→ show original
+   ↓ YES
+AI simplifier
+   ↓
+patient-friendly version
+```
